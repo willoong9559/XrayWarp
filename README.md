@@ -30,6 +30,13 @@ export ALL_PROXY=socks5://127.0.0.1:40000
 curl ifconfig.me
 ```
 7.修改v2ray/xray outbounds和分流规则，这里给出我的配置可自由发挥。
+inbounds要启动sniffing
+```
+"sniffing": {
+    "enabled": true,
+    "destOverride": ["http", "tls"]
+}
+```
 ```
 vim /usr/local/etc/xray/config.json
 ```
