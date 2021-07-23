@@ -72,6 +72,6 @@ vim /usr/local/etc/xray/config.json
 systemctl restart v2ray/xray
 systemctl status v2ray/xray
 ```
-xray可能需要下载geosite geoip
+xray可能需要下载geosite和geoip，
 google github上就能找到，wget url /usr/local/bin
 
