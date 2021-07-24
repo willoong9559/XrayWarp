@@ -30,15 +30,15 @@ export ALL_PROXY=socks5://127.0.0.1:40000
 curl ifconfig.me
 ```
 7.修改v2ray/xray outbounds和分流规则，这里给出我的配置可自由发挥。
+```
+vim /usr/local/etc/xray/config.json
+```
 inbounds要启动sniffing
 ```
 "sniffing": {
     "enabled": true,
     "destOverride": ["http", "tls"]
 }
-```
-```
-vim /usr/local/etc/xray/config.json
 ```
 ```
  "outbounds": [
@@ -80,5 +80,5 @@ systemctl restart v2ray/xray
 systemctl status v2ray/xray
 ```
 xray可能需要下载geosite和geoip，
-google github上就能找到，wget url /usr/local/bin
+google github上就能找到，下载后放在 /usr/local/bin
 
